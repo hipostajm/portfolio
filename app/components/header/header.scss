@@ -1,0 +1,7 @@
+li{
+  color: gray;
+}
+
+li::before{
+  content: "= ";
+}
