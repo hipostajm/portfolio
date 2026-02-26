@@ -3,7 +3,7 @@ import "./header.scss"
 
 export default function Header(){
   return(
-    <header className="flex flex-row ">
+    <header className="flex flex-row">
       <Avatar className="size-30">
         <AvatarImage src="pfp.png" />
         <AvatarFallback>pfp</AvatarFallback>

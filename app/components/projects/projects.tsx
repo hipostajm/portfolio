@@ -15,22 +15,22 @@ interface projectsProps{
 
 export default function Projects({projects}: projectsProps){
   return(
-<Carousel className="w-300 h-auto min-h-128 m-16 ml-auto mr-auto">
-  <CarouselContent className="h-full *:h-full">
+<Carousel className="w-[80%] md:h-100 h-140 m-16 ml-auto mr-auto ">
+  <CarouselContent className="h-full *:h-full flex flex-row pr-8 pl-8">
     {projects.map((project, index) => (
-      <CarouselItem key={index} className="basis-1/3 h-full overflow-y-auto">
-        <div className="bg-gray-100 m-2.5 h-full hover:scale-105 transition-transform">
+      <CarouselItem key={index} className="xl:basis-1/3 md:basis-1/2 min-h-full overflow-y-hidden overflow-x-hidden p-4">
+        <div className="border-2 border-black border-solid box-border h-full hover:md:scale-105 md:transition-transform">
           <a href={project.link} className="h-full">
             <h1 className="text-[2rem] text-center">{project.name}</h1>
-            {project.imgName ?  <img src={project.imgName} alt={project.name}/> : null}
+            {project.imgName && <img src={project.imgName} alt={project.name}/>}
             <h2 className="m-2.5">&emsp;{project.desc}</h2>
           </a>
         </div>
       </CarouselItem>
     ))}
   </CarouselContent>
-  <CarouselPrevious />
-  <CarouselNext />
+  <CarouselPrevious className="md:flex hidden"/>
+  <CarouselNext className="md:flex hidden"/>
 </Carousel>
   )
 } 

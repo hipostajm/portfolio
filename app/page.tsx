@@ -15,12 +15,24 @@ import About from "./components/about/about";
 import Projects from "./components/projects/projects";
 import Contact from "./components/contact/contact";
 import Project from "./models/project";
+import Footer from "./components/footer/footer";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-export default function Home() {
+const queryClient = new QueryClient()
+
+export default function Home(){
+  return(
+    <QueryClientProvider client={queryClient}>
+      <App></App>
+    </QueryClientProvider>
+  )
+}
+
+function App() {
   
   const projects: Project[] = [
-    {name: "ybet", desc: 'a a a a a a a a  a a a aa a a aaaaaaaaaaaaaaaa a a aa a aaaaa aa Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', link: "https://github.com/te-hee/ybet-backend", imgName: undefined},
-    {name: "ybet", desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', link: "https://github.com/te-hee/ybet-backend", imgName: undefined},
+    {name: "ybet", desc: 'Ybet is a project of end-2-end encrypted chat that me with my friends are doing.', link: "https://github.com/te-hee/ybet-backend", imgName: undefined},
+    {name: "Markdown Parser", desc: 'Simple markdown parser to html', link: "https://github.com/hipostajm/markdown-parser", imgName: undefined},
     {name: "ybet", desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', link: "https://github.com/te-hee/ybet-backend", imgName: undefined},
     {name: "ybet", desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', link: "https://github.com/te-hee/ybet-backend", imgName: undefined},
   ]
@@ -34,6 +46,8 @@ export default function Home() {
   <Projects projects={projects}></Projects> 
   <Seperator></Seperator>
   <Contact></Contact>
+  <Seperator></Seperator>
+  <Footer></Footer>
   </div> 
   );
 }
