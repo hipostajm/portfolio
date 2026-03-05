@@ -40,9 +40,12 @@ export default function Contact(){
     <>
     <h1>Contact me!</h1>
 
-    <form onSubmit={handleSubmit(onSubmit)} className="m-auto flex flex-col md:w-[400px] gap-[1rem] border-black border-solid border-2 p-10 ">
+    <form onSubmit={handleSubmit(onSubmit)} className="m-auto flex flex-col md:w-[400px] gap-[1rem] border-black border-solid border-2 p-10 items-center">
 
-      {isSubmitSuccessful && <p>Sucess!</p>}
+      {isPending && <div className="p-4 w-fit flex gap-3">
+        <div className="animate-spin flex items-center justify-center" >|</div>
+        Sending...
+        </div>}
 
       <input {...register("name")} type="text" placeholder="name" className="input"/>
       {errors.name && <span className="error">{errors.name.message}</span>}

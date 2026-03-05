@@ -17,13 +17,16 @@ import Contact from "./components/contact/contact";
 import Project from "./models/project";
 import Footer from "./components/footer/footer";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const queryClient = new QueryClient()
 
 export default function Home(){
   return(
     <QueryClientProvider client={queryClient}>
-      <App></App>
+      <TooltipProvider>
+        <App></App>
+      </TooltipProvider>
     </QueryClientProvider>
   )
 }
