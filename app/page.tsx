@@ -35,9 +35,9 @@ function App() {
   
   const projects: Project[] = [
     {name: "ybet", desc: 'Ybet is a project of end-2-end encrypted chat that me with my friends are doing.', link: "https://github.com/te-hee/ybet-backend", imgName: undefined},
-    {name: "Markdown Parser", desc: 'Simple markdown parser to html', link: "https://github.com/hipostajm/markdown-parser", imgName: undefined},
-    {name: "ybet", desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', link: "https://github.com/te-hee/ybet-backend", imgName: undefined},
-    {name: "ybet", desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', link: "https://github.com/te-hee/ybet-backend", imgName: undefined},
+    {name: "Portfolio", desc: 'Mine portfolio on which u are right now :D', link: "https://github.com/hipostajm/portfolio", imgName: undefined},
+    {name: "Led display", desc: 'A way to make use of HUB75 based led displays with abilty to send animations and static images for raspberry pi', link: "https://github.com/hipostajm/led-display"},
+    {name: "Short/Long polling", desc: 'Implementation of short and long polling in golang', link: "https://github.com/hipostajm/po-async-http-task"}
   ]
 
   return (

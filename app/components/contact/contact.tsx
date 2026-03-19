@@ -47,18 +47,18 @@ export default function Contact(){
         Sending...
         </div>}
 
-      <input {...register("name")} type="text" placeholder="name" className="input"/>
+      <input {...register("name")} type="text" placeholder="name (optional)" className="input"/>
       {errors.name && <span className="error">{errors.name.message}</span>}
 
-      <input {...register("email")} type="email" placeholder="e-mail" className="input"/>
+      <input {...register("email")} type="email" placeholder="e-mail (optional)" className="input"/>
       {errors.email && <span className="error">{errors.email.message}</span>}
 
-      <input {...register("discord")} type="text" placeholder="discord" className="input"/>
+      <input {...register("discord")} type="text" placeholder="discord (optional)" className="input"/>
       {errors.discord && <span className="error">{errors.discord.message}</span>}
 
       <textarea  {...register("message", {
         required: "Message is required!",
-      })} placeholder="message" rows={5} className="input before:content-['*'] before:text-red-500" >
+      })} placeholder="message (required)" rows={5} className="input before:content-['*'] before:text-red-500" >
       </textarea>
       {errors.message && <span className="error">{errors.message.message}</span>}
 
